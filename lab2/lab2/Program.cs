@@ -1,24 +1,92 @@
 ﻿using System;
-
-    public class Set
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using System.Xml.Linq;
+namespace lab2
+{
+    public partial class Set
     {
         private HashSet<int> _elements;
-
+        private readonly int _id;
+        private const string type = "set";
+        private static int _count = 0;
+        private string _name = "default";
         public Set()
         {
             _elements = new HashSet<int>();
         }
-        public void AddElement(int element)
+
+        public Set(HashSet<int> elements = null)
         {
-            _elements.Add(element);
+            if (elements == null)
+            {
+                _elements = new HashSet<int>();
+                _count++;
+                return;
+            }
+            _elements = elements;
+            _count++;
+
         }
-        public void RemoveElement(int element)
+        static Set()
+        {
+            Console.WriteLine("static Set");
+        }
+        private Set(HashSet<int> elements,int id)
+        {
+            _elements = elements;
+            _id = id;
+            _count++;
+        }
+        static void GetInfo()
+        {
+            Console.WriteLine($"name: {nameof(Set)}");
+            Console.WriteLine($"count: {_count}");
+            Console.WriteLine($"type: {type}");
+        }
+        
+        public void RemoveElement(ref int element)
         {
             _elements.Remove(element);
         }
         public int HashSetSize()
         {
             return _elements.Count;
+        }
+        public bool Equals(Set other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+            return _elements.SetEquals(other._elements);
+        }
+        public override int GetHashCode()
+        {
+            int hash = 4;
+            foreach( int element in _elements)
+            {
+                hash = hash * 31 + element;
+            }
+            return hash;
+        }
+        public override string ToString()
+        {
+            return $"set name: {_name}, id: {_id},type: {type}";
+        }
+        public bool IfCanGetLastElement(out int lastelem)
+        {
+            if(_elements.Count > 0 )
+            {
+                lastelem = _elements.Last();
+                return true;
+                
+            }
+            else
+            {
+                lastelem = default;
+                return false;
+            }
         }
         public int GetSum()
         {
@@ -33,21 +101,21 @@
         {
             foreach (int elem in _elements)
             {
-                if(elem <0)
+                if (elem < 0)
                 {
                     return true;
                 }
             }
             return false;
         }
-    public void PrintElements()
-    {
-        foreach (int elem in _elements)
+        public void PrintElements()
         {
-            Console.Write($"{elem} ");
+            foreach (int elem in _elements)
+            {
+                Console.Write($"{elem} ");
+            }
+            Console.WriteLine();
         }
-        Console.WriteLine();
-    }
     }
 
     class Program
@@ -75,36 +143,38 @@
             int minSum = minSet.GetSum();
             int maxSun = maxSet.GetSum();
 
-            foreach(var set in sets)
+            foreach (var set in sets)
             {
                 int elemSum = set.GetSum();
-                if(elemSum <minSum)
+                if (elemSum < minSum)
                 {
                     minSet = set;
                     minSum = elemSum;
                 }
-                if(elemSum>maxSun)
+                if (elemSum > maxSun)
                 {
                     maxSet = set;
                     maxSun = elemSum;
                 }
             }
             Console.WriteLine($"множество с минимальной суммой: ");
-        minSet.PrintElements();
+            minSet.PrintElements();
             Console.WriteLine($"множество с макс. суммой:");
-        maxSet.PrintElements();
+            maxSet.PrintElements();
 
-        Console.WriteLine("множества содержащие отрицательные элементы: ");
+            Console.WriteLine("множества содержащие отрицательные элементы: ");
 
-        foreach( var set in sets)
-        {
-            if(set.HasNegativeElem())
+            foreach (var set in sets)
             {
-                set.PrintElements();
+                if (set.HasNegativeElem())
+                {
+                    set.PrintElements();
+                }
             }
+            var anonSet = new {Name = "anonset", Id = 2131, Type = "set", count = 5, elements = new[] { 3, 25, 7, 9, 11 } };
+            Console.Write($"set name: {anonSet.Name}, id: {anonSet.Id},type: {anonSet.Type}");
         }
 
-        } 
-        
     }
+}
     

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "StatisticOperations.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\StatisticOperations.cs",
               "RelativeDocumentMoniker": "lab3\\StatisticOperations.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\StatisticOperations.cs",
               "RelativeToolTip": "lab3\\StatisticOperations.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAiwD4AAAAkAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAASwCwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T16:40:28.804Z",
               "EditorCaption": ""
@@ -45,27 +45,23 @@
               "RelativeDocumentMoniker": "lab3\\Vector.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Vector.cs",
               "RelativeToolTip": "lab3\\Vector.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAADwvzAAAAAqAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAgwJsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T12:43:27.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Program.cs",
               "RelativeDocumentMoniker": "lab3\\Program.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Program.cs",
               "RelativeToolTip": "lab3\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAYwB4AAAApAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAkwCMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T12:16:40.099Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

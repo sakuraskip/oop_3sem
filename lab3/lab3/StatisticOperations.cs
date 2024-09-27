@@ -44,16 +44,16 @@ namespace lab3
         {
         return vector.Count();
         }
-        public static string CutString(string input,int amount)
+        public static string CutString(this string input,int amount)
         {
-            if(input == null || amount>input.Length)
+            if(string.IsNullOrEmpty(input) || amount>input.Length)
             {
                 return string.Empty;
             }
             string result = input.Substring(amount);
             return result;
         }
-        public static Vector DeletePositiveElem(Vector vector)
+        public static Vector DeletePositiveElem(this Vector vector)
         {
             if(vector.Count()<0)
             {

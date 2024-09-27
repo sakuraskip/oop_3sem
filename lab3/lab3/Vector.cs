@@ -10,14 +10,21 @@ namespace lab3
     public class Vector
     {
         private List<int> _elements;
+        private Production _production;
+        private Developer _developer;
 
         public Vector()
         {
             _elements = new List<int>();
+            _production = new Production(0,"prod0");
+            _developer = new Developer("андрей", 0, "киберпреступник");
         }
         public Vector(List<int> elements)
         {
             _elements = elements;
+            _production = new Production(0, "prod0");
+            _developer = new Developer("андрей", 0, "киберпреступник");
+
         }
         public int GetElem(int index)
         {
@@ -128,17 +135,17 @@ namespace lab3
         }
         public class Production
         {
-            private int id;
-            private string name;
+            public int Id { get; set; }
+            public string Name { get; set; }
 
             public Production(int id, string name)
             {
-                this.id = id;
-                this.name = name;
+                this.Id = id;
+                this.Name = name;
             }
             public void Print()
             {
-                Console.WriteLine($"id: {this.id}\nname: {this.name}\n");
+                Console.WriteLine($"id: {this.Id}\nname: {this.Name}\n");
             }
         }
         public class Developer

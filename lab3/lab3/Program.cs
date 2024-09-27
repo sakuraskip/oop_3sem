@@ -32,9 +32,9 @@
             }
 
             string test3 = "абрикосы ананасы бананы";
-            test3 = StatisticOperations.CutString(test3, 4);
-            Console.WriteLine(test3);
-            vector3 = StatisticOperations.DeletePositiveElem(vector3);
+
+            test3.CutString(4);
+            vector3.DeletePositiveElem();
             vector3.Print();
         }
     }

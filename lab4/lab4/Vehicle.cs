@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 namespace lab4
 {
     public interface IInfo
@@ -150,15 +151,23 @@ namespace lab4
         }
         public override void IsMoving()
         {
-            if (Speed > 0)
+            try
             {
-                Console.WriteLine($"Лодка '{Name}' плывет со скоростью {Speed}");
+                Debug.Assert(Speed > 0, "скорость не может быть отрицательной");
+                if (Speed > 0)
+                {
+                    Console.WriteLine($"Лодка '{Name}' плывет со скоростью {Speed}");
+                }
+                else
+                {
+                    Console.WriteLine($"Лодка '{Name}' не плывет");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Console.WriteLine($"Лодка '{Name}' не плывет");
+                ExceptionHandle.HandleException(ex);
             }
-        }
+            }
         public override void CanShoot()
         {
             Console.WriteLine($"Лодка {Name} не может стрелять");

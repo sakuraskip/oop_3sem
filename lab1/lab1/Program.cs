@@ -91,10 +91,10 @@ namespace lab1
 
             //task e
             int? varInt = null;
-            int nullValue = varInt ?? 127;
+            int nullValue = varInt ?? 127;//если varint = null - nullvalue = 127
 
             var taskf = 3;
-            taskf = 1 /*"c"*/;
+            taskf = "c";
 
 
             //Task 2, a
@@ -102,7 +102,7 @@ namespace lab1
             string str2 = "бебра";
             string str3 = "бобер";
             bool isEqual;
-            if (str1 == str2)
+            if (str1.Equals(str2))
             {
                 isEqual = true;
             }
@@ -171,7 +171,7 @@ namespace lab1
             {
                 while(counter < max)
                 {
-                    Convert.ToInt16(Console.ReadLine());
+                    Convert.ToInt32(Console.ReadLine());
                     counter++;
                 }
                 max++;

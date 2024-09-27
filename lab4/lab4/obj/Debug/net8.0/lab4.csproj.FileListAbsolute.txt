@@ -12,3 +12,4 @@ C:\Users\леха\Desktop\3sem\лабы\oop\lab4\lab4\obj\Debug\net8.0\refint\la
 C:\Users\леха\Desktop\3sem\лабы\oop\lab4\lab4\obj\Debug\net8.0\lab4.pdb
 C:\Users\леха\Desktop\3sem\лабы\oop\lab4\lab4\obj\Debug\net8.0\lab4.genruntimeconfig.cache
 C:\Users\леха\Desktop\3sem\лабы\oop\lab4\lab4\obj\Debug\net8.0\ref\lab4.dll
+C:\Users\леха\Desktop\3sem\лабы\oop\lab4\lab4\obj\Debug\net8.0\lab4.sourcelink.json
