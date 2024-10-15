@@ -171,6 +171,10 @@ namespace lab2
                     set.PrintElements();
                 }
             }
+            int bpik = 0;
+            bool dsf = maxSet.IfCanGetLastElement(out bpik);
+            Console.WriteLine(bpik);
+            
             var anonSet = new {Name = "anonset", Id = 2131, Type = "set", count = 5, elements = new[] { 3, 25, 7, 9, 11 } };
             Console.Write($"set name: {anonSet.Name}, id: {anonSet.Id},type: {anonSet.Type}");
         }

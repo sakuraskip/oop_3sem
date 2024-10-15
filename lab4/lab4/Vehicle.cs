@@ -8,8 +8,24 @@ namespace lab4
         int Speed { get; set; }
         void IsMoving();
     }
+    public abstract class BaseInfo
+    {
+        public abstract void IsMoving();
+    }
+    public class unknownShip : BaseInfo, IInfo
+    {
+        public string Name { get; set; } = "unknown";
+        public int Speed { get; set; }
 
-
+        void IInfo.IsMoving()
+        {
+            Console.WriteLine("корабль движется через интерфейс");
+        }
+        public override void IsMoving()
+        {
+            Console.WriteLine("корабль движется через переопределенный метод");
+        }
+    }
     public abstract class Vehicle : IInfo
     {
         private int _speed;
@@ -29,6 +45,10 @@ namespace lab4
 
         public abstract void IsMoving();
 
+        public virtual string GetDetails()
+        {
+            return ToString();
+        }
         public override string ToString()
         {
             return $"Транспортное средство: Название:{Name}, скорость:{Speed} ";
@@ -53,6 +73,10 @@ namespace lab4
 
         public abstract void CanShoot();
         public override string ToString()
+        {
+            return GetDetails();
+        }
+        public override string GetDetails()
         {
             return $"Тип корабля{ShipType} : Название:{Name}, скорость:{Speed},Команда: {Team}, Капитан: {Captain.Name} ";
         }
@@ -153,7 +177,7 @@ namespace lab4
         {
             try
             {
-                Debug.Assert(Speed > 0, "скорость не может быть отрицательной");
+                Debug.Assert(Speed < 40, "скорость для лодки не может быть выше 40");
                 if (Speed > 0)
                 {
                     Console.WriteLine($"Лодка '{Name}' плывет со скоростью {Speed}");
@@ -201,13 +225,5 @@ namespace lab4
     {
         Steamship,Sailboat,
         Corvette,Boat
-    }
-    
-    public class Printer
-    {
-        public static void IAmPrinting(IInfo someobj)
-        {
-            Console.WriteLine($"type: {someobj.GetType()}, {someobj}");
-        }
     }
 }
