@@ -24,19 +24,20 @@ namespace lab2
                 _count++;
                 return;
             }
-            _elements = elements;
-            _count++;
-
         }
         static Set()
         {
             Console.WriteLine("static Set");
         }
-        private Set(HashSet<int> elements,int id)
+        private Set(HashSet<int> elements, int id)
         {
             _elements = elements;
             _id = id;
             _count++;
+        }
+        public static Set GetPrivateSet(HashSet<int> elem, int id)
+        {
+            return new Set(elem,id);
         }
         static void GetInfo()
         {

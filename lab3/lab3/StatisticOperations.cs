@@ -8,7 +8,7 @@ namespace lab3
 {
     public static class StatisticOperations
     {
-        public static int Sum(Vector vector)
+        public static int Sum(this Vector vector)
         {
             int result = 0;
             for(int i=0;i<vector.Count();i++)

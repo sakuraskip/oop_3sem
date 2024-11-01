@@ -12,12 +12,13 @@ namespace lab3
         private List<int> _elements;
         private Production _production;
         private Developer _developer;
-
+        
         public Vector()
         {
             _elements = new List<int>();
             _production = new Production(0,"prod0");
             _developer = new Developer("андрей", 0, "киберпреступник");
+            
         }
         public Vector(List<int> elements)
         {

@@ -1,4 +1,6 @@
-﻿namespace lab3
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace lab3
 {
     public class Program
     {
@@ -36,6 +38,8 @@
             test3.CutString(4);
             vector3.DeletePositiveElem();
             vector3.Print();
+
+            vector3.Sum();
         }
     }
 }
