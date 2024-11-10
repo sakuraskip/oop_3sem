@@ -41,8 +41,9 @@ namespace lab9
             return GetEnumerator();
         }
         public void Add(Растение plant)
-        {
+        { 
             plants.Add(plant);
+            Console.WriteLine($"растение {plant} добавлено");
         }
         public void Clear()
         {

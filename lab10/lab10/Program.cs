@@ -63,11 +63,17 @@ namespace lab10
             var orderByFirst = list1.OrderBy(set => set._elements.First());
 
             var request = from set in list1
-                          where set.GetSum() >= 0
+                          where set.GetSum() >= 0 // ограничение
                           where set._elements.Any()
-                          group set by set._elements.First() into setlist
-                          orderby setlist
-                          select setlist;
+                          group set by set._elements.First() into setlist // соединение
+                          orderby setlist.Key // упорядочивание
+                          select new //проекция
+                          {
+                              key = setlist.Max(set=> set.GetSum()), // агрегация
+
+                          };
+
+            Console.WriteLine("але");
 
 
             HashSet<int> set7 = new HashSet<int> { 1,2,3,4,5};
