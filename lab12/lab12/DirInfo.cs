@@ -19,6 +19,7 @@ namespace lab12
                 Console.WriteLine("список родительских директореив: " + info.Parent);
                 Console.WriteLine();
             }
+            Log.WriteLog("", dirpath, "информация о директории");
         }
     }
 }

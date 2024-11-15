@@ -20,6 +20,8 @@ namespace lab12
                     "\nдата изменения: "+info.LastWriteTime);
             }
             Console.WriteLine();
+
+            Log.WriteLog(info.Name, filepath, "информация о файле");
         }
     }
 }

@@ -21,10 +21,12 @@ namespace lab12
                     Console.WriteLine(drive.TotalSize);
                     Console.WriteLine(drive.AvailableFreeSpace);
                     Console.WriteLine(drive.VolumeLabel);
+                    Log.WriteLog(drive.Name, drive.Name, "информация о диске");
 
                 }
             }
             Console.WriteLine();
+
 
 
         }
