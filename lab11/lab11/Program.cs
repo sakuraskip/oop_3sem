@@ -26,6 +26,9 @@ namespace lab11
 
 
             Reflector<Vector>.Invoke(test,test,"printSomeText");
+
+            var test4 = Reflector<Vector>.Create(test);
+
         }
     }
 }

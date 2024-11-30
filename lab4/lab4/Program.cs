@@ -5,7 +5,9 @@ namespace lab4
     {
         static void Main(string[] args)
         {
-            Captain boatCaptain = new Captain {Name = "олег",Age = 32 };
+
+            Captain boatCaptain = new Captain {Name =
+                "олег",Age = 32 };
             Boat boat = new Boat {Name = "лодка1",Speed = 41,Team = 2,Captain = boatCaptain };
             boat.IsMoving(); boat.CanShoot();
 
@@ -24,6 +26,7 @@ namespace lab4
 
             Corvette corvette = new Corvette { Captain = steamshipCap,Speed=59,Team=30,Name="корабль3000" };
             Ship vehicle1 = boat;
+            Console.WriteLine(vehicle1.ToString());
 
 
             var shipContainer = new ShipContainer();
@@ -41,7 +44,6 @@ namespace lab4
             unkship.IsMoving();
             ((IInfo)unkship).IsMoving();
 
-            Console.WriteLine(vehicle1.ToString());
 
             if(vehicle1 is Boat)
             {

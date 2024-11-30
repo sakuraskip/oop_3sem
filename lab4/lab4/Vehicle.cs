@@ -177,7 +177,7 @@ namespace lab4
         {
             try
             {
-                Debug.Assert(Speed < 40, "скорость для лодки не может быть выше 40");
+                Debug.Assert(Speed > 40, "скорость для лодки не может быть выше 40");
                 if (Speed > 0)
                 {
                     Console.WriteLine($"Лодка '{Name}' плывет со скоростью {Speed}");
@@ -215,6 +215,7 @@ namespace lab4
               _age = value;
             }
         }
+        
         public string Name {get { return _name;} set { _name = value; } }
         public override string ToString()
         {

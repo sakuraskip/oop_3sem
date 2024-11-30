@@ -53,6 +53,7 @@ namespace lab3
             string result = input.Substring(amount);
             return result;
         }
+       
         public static Vector DeletePositiveElem(this Vector vector)
         {
             if(vector.Count()<0)
